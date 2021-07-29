@@ -1,11 +1,11 @@
 # Pneumonia-Classification-using-CNN
 
-### Yoga Pose Similarity Detection
-
 This Flask application mainly helps in Detetcting Pneumonia for a given patient Chest X-Ray sample.
 Application in NutShell :-
 1) user Uploads the image of Chest X-Ray sample.
 2) Application then calls Vgg16 CNN model to detect wheather a X-ray Sample as Pneumonia infection or not. 
+
+[APP Demo] ()
 
 ### SetUP and Instruction Guide
 
