@@ -1,11 +1,11 @@
 # Pneumonia-Classification-using-CNN
 
 This Flask application mainly helps in Detetcting Pneumonia for a given patient Chest X-Ray sample.
+
 Application in NutShell :-
 1) user Uploads the image of Chest X-Ray sample.
 2) Application then calls Vgg16 CNN model to detect wheather a X-ray Sample as Pneumonia infection or not. 
-
-[APP Demo] ()
+[APP Demo](https://github.com/PalashShinde/Pneumonia-Classification-using-CNN/blob/main/app/app_gif/pnenomia_gg.gif)
 
 ### SetUP and Instruction Guide
 
@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```
 ### Dataset
 Model is trained on [kaggle dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) of Chest X-Ray Images (Pneumonia) challenge
-#### [Pretrained Vgg16 model weights] (https://keras.io/api/applications/vgg/#vgg16-function)
+#### [Pretrained Vgg16 model weights](https://keras.io/api/applications/vgg/#vgg16-function)
 
 ### Model Training 
 Place the train & val data from kaggle repo in below dirs~
@@ -61,7 +61,7 @@ $ python3 classifier.py train
 ```
 
 ### Test weights with Flask application locally.
-Upadte the weught file path in app.py on weight_path = STATIC_FOLDER + '/' + '.h5'
+Update the weight file path in app.py on weight_path = STATIC_FOLDER + '/' + '.h5'
 ```
 cd ~/app/
 $ python3 app.py train
