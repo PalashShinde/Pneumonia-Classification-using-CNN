@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pneumonia Classification</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+		rel="stylesheet" type="text/css">
+
+</head>
+
+<script>
+	function showloading() {
+		image = document.getElementById('loading_image');
+		image.style.display = 'inline'
+	}
+</script>
+
+<style>
+	.img_holder img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.btn-file {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.btn-file input[type=file] {
+		position: absolute;
+		top: 0;
+		right: 0;
+		min-width: 100%;
+		min-height: 100%;
+		font-size: 100px;
+		text-align: right;
+		filter: alpha(opacity=0);
+		opacity: 0;
+		outline: none;
+		background: white;
+		cursor: inherit;
+		display: block;
+	}
+
+	.post_man {
+		background-color: #ffffff;
+		padding: 20px;
+		color: #636363;
+		min-height: 345px;
+		margin: 40px 0px;
+		border-radius: 0.25em;
+	}
+
+	.post_man h2 {
+		color: #272727;
+		font-size: 2.2rem;
+		padding-bottom: 12px;
+	}
+
+	.post_man p {
+		color: black;
+	}
+
+	.curl {
+		background-color: #ffffff;
+		margin: 40px 0px;
+		color: #636363;
+		padding: 20px;
+		min-height: 345px;
+		border-radius: 0.25em;
+	}
+
+	.curl h2 {
+		color: #272727;
+		font-size: 2.2rem;
+		padding-bottom: 12px;
+	}
+
+	.curl p {}
+
+	.curl li {}
+
+	.practices {}
+
+	.practices h2 {
+		color: #fff;
+		padding-bottom: 8px;
+		border-bottom: 1px solid #fff;
+		border-width: thin;
+		width: 190px;
+		margin-bottom: 45px;
+	}
+
+	.practices p {
+		color: #fff;
+	}
+
+	.practices li {
+		color: #fff;
+		font-size: 20px;
+		padding-bottom: 10px;
+	}
+
+	.list-inline li i {
+		margin-right: 15px;
+	}
+
+	code {
+		padding: 2px 4px;
+		font-size: 90%;
+		color: #74767c;
+		border-radius: 4px;
+	}
+
+	hr {
+		margin-top: 20px;
+		height: 0.2px;
+		background: rgba(255 255 255);
+	}
+
+	.post-curl p {
+		font-size: 20px;
+		color: #fff;
+	}
+
+	.post-curl span {
+		color: #68e890;
+		margin-right: 8px;
+		font-weight: bold;
+	}
+
+	.API {
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		margin-top: 130px;
+		font-size: 28px;
+	}
+</style>
+
+<body style="background-color:#363738;">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="konverge_logo">
+					<h1 style="text-align:center">Pneumonia infection Detection using Artificial Intelligence
+						</span></h1>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="row">
+				<div class="col-md-5">
+					<img style="width:100%" src="../static/pne.jpg" />
+				</div>
+				<div class="col-md-5">
+					<form action="/upload" method="post" enctype="multipart/form-data"
+						style="margin-top: 30px; width: 100%; text-align: center; margin: auto; margin-top: 32px;"
+						onsubmit="showloading()">
+						<h3 style=" color: white "> Select Sample for Prediction </h3><br><br>
+						<input type="file" id="myfile" name="image" style=" margin: auto ; color: white"><br><br>
+						<input type="submit" value="Upload" class="btn btn-primary" style="margin_right:70px">
+						<br><br>
+
+					</form>
+					<div style="text-align: center">
+						<img id="loading_image" style="display: none"
+							src="{{ url_for('static', filename='loading.gif')}}">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+
+</html>

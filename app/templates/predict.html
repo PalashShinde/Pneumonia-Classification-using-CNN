@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:#2d2e30;">
+
+  <h2 style="margin: auto;width: 80%; text-align: center; margin-top: 20px ; color: white "> Pneumonia Classification
+  </h2>
+
+  <div
+    style="width: 90%; margin: auto; text-align: center ; margin: 35px ; margin-left: 95px; margin-top: 20px  ; color: white ">
+    <img src="{{ url_for('send_file', filename=image_file_name)}}" style="max-width: 500px; max-height: 398px; margin-top: 30px; margin-bottom: 10px 
+      ; color: white">
+    <p style="font-style: italic">{{ image_file_name }}</p>
+
+    <h3 style="color: white"><b> Actual Class of Specimen : <span style="color: white;">{{ actual_class }} </span></b>
+    </h3>
+
+    {% if label == actual_class -%}
+    <h3 style="margin-top: 40px; color: white "><b> Model Predicted as : <span style="color: white">{{ label
+          }}</span></b></h3>
+    {% elif label != actual_class -%}
+    <h3 style="margin-top: 40px ; color: white"><b> Model Predicted as : <span style="color: red">{{ label }}</span></b>
+    </h3>
+    {% endif %}
+
+    <a href="/" style="color:white">Back to Home</a>
+  </div>
+
+</body>
+
+</html>

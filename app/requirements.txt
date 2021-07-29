@@ -1,0 +1,5 @@
+opencv_contrib_python==3.4.3.18
+numpy==1.16.4
+Keras==2.3.1
+tensorflow==2.1.0
+Flask==1.1.1
