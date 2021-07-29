@@ -65,6 +65,6 @@ $ python3 classifier.py train
 Update the weight file path in app.py on weight_path = STATIC_FOLDER + '/' + '.h5'
 ```
 cd ~/app/
-$ python3 app.py train
+$ python3 app.py
 ```
 
