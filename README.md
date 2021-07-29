@@ -4,7 +4,7 @@ This Flask application mainly helps in Detetcting Pneumonia for a given patient 
 
 Application in NutShell :-
 * User Uploads the image of Chest X-Ray sample.
-* Application then calls Vgg16 CNN model to detect wheather a X-ray Sample as Pneumonia infection or not. 
+* Application then calls Vgg16 CNN model to detect wheather a X-ray Sample has Pneumonia infection or not and returns back the sample with predicted class. 
 
 ![APP Demo](https://github.com/PalashShinde/Pneumonia-Classification-using-CNN/blob/main/app/app_gif/pnenomia_gg.gif)
 
